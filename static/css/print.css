@@ -1,0 +1,132 @@
+/* ==========================================================================
+   AI Resume Analyzer - Print & PDF Export Stylesheet
+   Formats results cleanly for PDF generation or printing
+   ========================================================================== */
+
+@media print {
+  body {
+    background: #ffffff !important;
+    color: #111827 !important;
+    font-size: 11pt !important;
+  }
+
+  .site-header,
+  .hero,
+  .sample-bar,
+  .stepper-nav,
+  .input-grid,
+  .action-banner,
+  .loading-overlay,
+  .modal-backdrop,
+  .toast-container,
+  .site-footer,
+  .results-toolbar,
+  .bg-mesh,
+  .skills-filter-nav {
+    display: none !important;
+  }
+
+  .results-section {
+    display: block !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .container {
+    max-width: 100% !important;
+    padding: 0 !important;
+  }
+
+  .disclaimer-banner {
+    border: 1px solid #d97706 !important;
+    background: #fef3c7 !important;
+    color: #92400e !important;
+  }
+
+  .score-hero-card {
+    background: #f8fafc !important;
+    border: 1px solid #e2e8f0 !important;
+    box-shadow: none !important;
+    color: #0f172a !important;
+    page-break-inside: avoid;
+    grid-template-columns: 200px 1fr !important;
+    gap: 20px !important;
+    padding: 20px !important;
+  }
+
+  .gauge-svg-wrap {
+    width: 130px !important;
+    height: 130px !important;
+  }
+
+  .gauge-score-num {
+    font-size: 2.4rem !important;
+    color: #0f172a !important;
+  }
+
+  .subscore-item {
+    background: #ffffff !important;
+    border: 1px solid #e2e8f0 !important;
+  }
+
+  .subscore-top {
+    color: #475569 !important;
+  }
+
+  .subscore-val {
+    color: #0f172a !important;
+  }
+
+  .subscore-bar-bg {
+    background: #e2e8f0 !important;
+  }
+
+  .subscore-bar-fill {
+    background: #4f46e5 !important;
+  }
+
+  .results-grid {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 16px !important;
+    margin-top: 16px !important;
+    page-break-inside: avoid;
+  }
+
+  .result-card {
+    background: #ffffff !important;
+    border: 1px solid #cbd5e1 !important;
+    box-shadow: none !important;
+    padding: 16px !important;
+    page-break-inside: avoid;
+  }
+
+  .skill-tag.matched {
+    background: #d1fae5 !important;
+    border: 1px solid #10b981 !important;
+    color: #065f46 !important;
+  }
+
+  .skill-tag.missing-high {
+    background: #ffe4e6 !important;
+    border: 1px solid #f43f5e !important;
+    color: #9f1239 !important;
+  }
+
+  .skill-tag.missing-rec {
+    background: #fef3c7 !important;
+    border: 1px solid #f59e0b !important;
+    color: #92400e !important;
+  }
+
+  .suggestion-card {
+    background: #f8fafc !important;
+    border: 1px solid #cbd5e1 !important;
+    page-break-inside: avoid;
+  }
+
+  .suggestion-example-box {
+    background: #f1f5f9 !important;
+    color: #1e293b !important;
+    border: 1px solid #cbd5e1 !important;
+  }
+}
