@@ -1566,3 +1566,46 @@ body {
     font-size: 0.72rem;
   }
 }
+
+/* Warm Copper palette: espresso dark mode and cream light mode */
+[data-accent="copper"] {
+  --bg-primary: #17130f;
+  --bg-secondary: #211b16;
+  --bg-tertiary: #30261f;
+  --bg-card: rgba(33, 27, 22, 0.88);
+  --bg-card-hover: rgba(48, 38, 31, 0.95);
+  --bg-input: rgba(30, 24, 19, 0.92);
+  --border-subtle: rgba(229, 197, 158, 0.13);
+  --border-focus: rgba(196, 123, 75, 0.65);
+  --border-glow: rgba(196, 123, 75, 0.25);
+  --text-primary: #f7efe5;
+  --text-secondary: #c7b8a6;
+  --text-muted: #a08f7d;
+  --primary: #c47b4b;
+  --primary-hover: #a65e35;
+  --primary-light: rgba(196, 123, 75, 0.18);
+  --gradient-brand: linear-gradient(135deg, #c47b4b 0%, #e2b878 100%);
+  --gradient-card-glow: radial-gradient(circle at top right, rgba(196, 123, 75, 0.13), transparent 70%);
+  --shadow-glow: 0 0 25px rgba(196, 123, 75, 0.2);
+}
+
+[data-theme="light"][data-accent="copper"] {
+  --bg-primary: #f4efe6;
+  --bg-secondary: #fffcf6;
+  --bg-tertiary: #eae1d5;
+  --bg-card: rgba(255, 252, 246, 0.92);
+  --bg-card-hover: #f5ecdf;
+  --bg-input: #fffcf6;
+  --border-subtle: rgba(82, 57, 39, 0.14);
+  --border-focus: rgba(166, 94, 53, 0.55);
+  --border-glow: rgba(166, 94, 53, 0.18);
+  --text-primary: #2b241f;
+  --text-secondary: #635346;
+  --text-muted: #8b7969;
+  --primary: #a65e35;
+  --primary-hover: #874a29;
+  --primary-light: rgba(166, 94, 53, 0.12);
+  --gradient-brand: linear-gradient(135deg, #a65e35 0%, #c58a4f 100%);
+  --gradient-card-glow: radial-gradient(circle at top right, rgba(166, 94, 53, 0.08), transparent 70%);
+  --shadow-glow: 0 0 20px rgba(166, 94, 53, 0.12);
+}
