@@ -177,7 +177,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   applyTheme(state.theme);
   // Accent color presets
-  const accentThemes = ['indigo', 'blue', 'purple', 'green'];
+  const accentThemes = ['indigo', 'blue', 'purple', 'green', 'copper'];
   function applyAccentTheme(theme) {
     const selectedTheme = accentThemes.includes(theme) ? theme : 'indigo';
     state.accentTheme = selectedTheme;
@@ -1074,3 +1074,4 @@ ${s.example ? `> ${s.example.replace(/\n/g, '\n> ')}` : ''}
   // Initialize
   updateStepper();
 });
+
