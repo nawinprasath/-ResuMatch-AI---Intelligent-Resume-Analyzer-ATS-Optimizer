@@ -14,7 +14,8 @@ document.addEventListener('DOMContentLoaded', () => {
     currentResults: null,
     engine: localStorage.getItem('resumatch_engine') || 'local',
     geminiApiKey: localStorage.getItem('resumatch_gemini_key') || '',
-    theme: localStorage.getItem('resumatch_theme') || 'dark'
+    theme: localStorage.getItem('resumatch_theme') || 'dark',
+    accentTheme: localStorage.getItem('resumatch_accent_theme') || 'indigo'
   };
 
   // DOM Elements
@@ -23,6 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
     engineBadge: document.getElementById('engine-status-badge'),
     engineText: document.getElementById('engine-status-text'),
     themeToggleBtn: document.getElementById('theme-toggle-btn'),
+    accentThemeSelect: document.getElementById('accent-theme-select'),
     themeMoonIcon: document.getElementById('theme-moon-icon'),
     themeSunIcon: document.getElementById('theme-sun-icon'),
     settingsBtn: document.getElementById('settings-btn'),
@@ -174,6 +176,20 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   applyTheme(state.theme);
+  // Accent color presets
+  const accentThemes = ['indigo', 'blue', 'purple', 'green'];
+  function applyAccentTheme(theme) {
+    const selectedTheme = accentThemes.includes(theme) ? theme : 'indigo';
+    state.accentTheme = selectedTheme;
+    document.documentElement.setAttribute('data-accent', selectedTheme);
+    elements.accentThemeSelect.value = selectedTheme;
+    localStorage.setItem('resumatch_accent_theme', selectedTheme);
+  }
+
+  elements.accentThemeSelect.addEventListener('change', (event) => {
+    applyAccentTheme(event.target.value);
+  });
+  applyAccentTheme(state.accentTheme);
 
   // ==========================================================================
   // Settings & Engine Mode
